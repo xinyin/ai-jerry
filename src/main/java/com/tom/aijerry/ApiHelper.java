@@ -20,7 +20,7 @@ public class ApiHelper {
         UserMessage userMessage = UserMessage.from(message);
         ChatResponse chatResponse = qwenChatModel.chat(userMessage);
         AiMessage aiMessage = chatResponse.aiMessage();
-        log.info("AI 输出：" + aiMessage.toString());
+        log.info("AI 输出内容：" + aiMessage.toString());
         return aiMessage.text();
     }
 }
